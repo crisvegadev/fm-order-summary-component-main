@@ -7,18 +7,38 @@
     font-family: 'Red Hat Display', sans-serif;
 }
 
+body{
+    background: url("../../images/pattern-background-desktop.svg") no-repeat top center fixed;
+    background-color: hsl(225, 100%, 98%);
+    height: 100vh;
+    background-size: 100%;
+}
+
+/* Center <main> vertically */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .card {
     overflow: hidden;
-    border-radius: 20px 20px 0px 0px;
-    margin: 15px;
+    border-radius: 20px;
+    margin: 15px auto;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    max-width: 450px ;
+    background: #fff;
 }
 
 .content {
-    padding: 40px 25px;
+    padding: 40px 25px 10px 25px;
     background-color: #fff;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
 }
-
 
 .title{
     font-weight: 900;
@@ -26,37 +46,99 @@
 }
 
 .description{
-    margin: 15px 0px;
+    margin: 40px 0px;
+    padding: 0px 20px;
+    font-size: 18px;
+    color: hsl(224, 23%, 55%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-.text-very-pale-blue{
-    color: hsl(225, 100%, 98%);
+.info-payment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background: hsl(225, 100%, 98%);
+    border-radius: 15px;
+    margin-bottom: 50px;
 }
 
-.text-bright-blue{
+.pay-info{
+    display: block;
+    margin-left: 25px;
+}
+
+.price-title{
+    display: block;
+    color: hsl(223, 47%, 23%);
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.price{
+    display: block;
+    color: hsl(224, 23%, 55%);
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+.action{
     color: hsl(245, 75%, 52%);
+    font-weight: 900;
 }
 
-.text-dark-blue{
-    color:hsl(223, 47%, 23%);
+.btn{
+    width: 100%;
+    display: block;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.text-desaturated-blue{
+.btn.payment{
+    background: hsl(245, 75%, 52%);
+    color: #fff;
+    box-shadow: 0px 5px 10px 6px hsl(223, 47%, 23%, 0.30);
+}
+
+.btn.cancel{
+    /* margin-top: 25px; */
+    background: transparent;
     color:hsl(224, 23%, 55%);
 }
 
-.text-very-pale-blue{
-    color:hsl(225, 100%, 98%);
+.btn.payment:hover{
+    opacity: 70%;
+}
+
+.btn.cancel:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+.action:hover{
+    opacity: 70%;
+    /* color: hsl(223, 47%, 23%); */
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media  (max-width: 500px) {
+    body{
+        background: url("../../images/pattern-background-mobile.svg") no-repeat top center fixed;
+        background-size: 100%;
+        background-color: hsl(225, 100%, 98%);
+        height: 100vh;
+    }
+
+    
+    .card {
+        max-width: 340px ;
+    }
+    
 }
