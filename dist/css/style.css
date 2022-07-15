@@ -9,7 +9,7 @@
 
 body{
     background: url("../../images/pattern-background-desktop.svg") no-repeat top center fixed;
-    background-color: hsl(225, 100%, 98%);
+    background-color: hsl(224, 100%, 94%);
     height: 100vh;
     background-size: 100%;
 }
@@ -43,6 +43,7 @@ main{
 .title{
     font-weight: 900;
     color:hsl(223, 47%, 23%);
+    font-size: 18px;
 }
 
 .description{
